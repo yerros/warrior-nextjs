@@ -27,127 +27,114 @@ export default class padigree extends Component {
               Malang
             </span>
           </div>
-          <div className="flex items-center justify-center p-5 screens">
-            <div className="flex flex-wrap -mx-4 sm:items-center">
-              <div className="p-2">
-                <div className="flex items-center w-full p-2 bg-white border shadow rounded-xl">
-                  <div className="space-x-4">
-                    <img
-                      src="/img/male.png"
-                      alt="My profile"
-                      className="w-8 h-14"
-                    />
+          <div class="container h-full w-screen">
+            <div class="flex flex-between h-full p-8">
+              <div class="w-2/6 py-12">
+                <div class="h-2/4 py-2 boks">
+                  <div class="w-full h-full px-2 flex flex-col">
+                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
+                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                        <div class="flex items-center space-x-4 mr-2">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
+                        </div>
+                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                          <div class="font-semibold text-gray-700">MAD 01</div>
+                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="relative overflow-hidden bg-white rounded-xl shadow">
+                        <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                          <div class="flex items-center space-x-4 mr-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
+                          </div>
+                          <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                            <div class="font-semibold text-gray-700">MAD 01</div>
+                            <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex-grow p-3">
-                    <div className="font-semibold text-gray-700">MAD 01</div>
-                    <div className="text-sm text-gray-500">
-                      PPMBSI 2020 / 952555
+                </div>
+                <div class="h-2/4 py-2">
+                  <div class="w-full h-full px-2 flex flex-col">
+                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
+                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                        <div class="flex items-center space-x-4 mr-2">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/FemalePink.png" alt="My profile" class="object-contain w-8" />
+                        </div>
+                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                          <div class="font-semibold text-gray-700">MAD 0111</div>
+                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="">
+                      <div class="relative overflow-hidden bg-white rounded-xl shadow">
+                        <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                          <div class="flex items-center space-x-4 mr-2">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
+                          </div>
+                          <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                            <div class="font-semibold text-gray-700">MAD 01</div>
+                            <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex-col items-center p-2 my-auto">
-                <div className="flex items-center w-full p-2 mb-32 mr-5 bg-white border shadow rounded-xl">
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src="/img/male.png"
-                      alt="My profile"
-                      className="w-8 h-14"
-                    />
-                  </div>
-                  <div className="flex-grow p-3">
-                    <div className="font-semibold text-gray-700">
-                      Iwan Makita 90
+              <div class="w-2/6">
+                <div class="h-full">
+                  <div class="w-full h-full px-2 flex flex-col justify-center">
+                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
+                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                        <div class="flex items-center space-x-4 mr-2">
+                          <img src="/img/female.png" alt="My profile" class="object-contain w-8" />
+                        </div>
+                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                          <div class="font-semibold text-gray-700">MAD 01</div>
+                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-sm text-gray-500">
-                      PPMBSI 2020 / 952555
-                    </div>
-                  </div>
-                </div>
-                <div className="flex items-center w-full p-2 mr-5 bg-white border shadow rounded-xl">
-                  <div className="flex items-center space-x-4">
-                    <img
-                      src="/img/female.png"
-                      alt="My profile"
-                      className="w-8 h-14"
-                    />
-                  </div>
-                  <div className="flex-grow p-3">
-                    <div className="font-semibold text-gray-700">ELLA 290</div>
-                    <div className="text-sm text-gray-500">
-                      PPMBSI 2020 / 952555
+                    <div class="relative overflow-hidden bg-white rounded-xl shadow">
+                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                        <div class="flex items-center space-x-4 mr-2">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
+                        </div>
+                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                          <div class="font-semibold text-gray-700">MAD 01</div>
+                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="p-2 my-auto min-w-2xl">
-                <div className="mb-12">
-                  <div className="flex items-center w-full p-2 mb-5 mr-5 bg-white border shadow rounded-xl">
-                    <div className="flex items-center space-x-4">
-                      <img
-                        src="/img/male.png"
-                        alt="My profile"
-                        className="w-8 h-14"
-                      />
-                    </div>
-                    <div className="flex-grow p-3">
-                      <div className="font-semibold text-gray-700">
-                        Iwan Makita 90
+              <div class="w-2/6 py-56">
+                <div class="h-full">
+                  <div class="w-full h-full px-2 flex items-center">
+                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
+                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
+                        <div class="flex items-center space-x-4 mr-2">
+                          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/FemalePink.png" alt="My profile" class="object-contain w-8" />
+                        </div>
+                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
+                          <div class="font-semibold text-gray-700">MAD 01</div>
+                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
+                        </div>
                       </div>
-                      <div className="text-sm text-gray-500">-</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center w-full p-2 mr-5 bg-white border shadow rounded-xl">
-                    <div className="flex items-center space-x-4">
-                      <img
-                        src="/img/female.png"
-                        alt="My profile"
-                        className="w-8 h-14"
-                      />
-                    </div>
-                    <div className="flex-grow p-3">
-                      <div className="font-semibold text-gray-700">
-                        Iwan Makita 80
-                      </div>
-                      <div className="text-sm text-gray-500">-</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="mb-5">
-                  <div className="flex items-center w-full p-2 mb-5 mr-5 bg-white border shadow rounded-xl">
-                    <div className="flex items-center space-x-4">
-                      <img
-                        src="/img/male.png"
-                        alt="My profile"
-                        className="w-8 h-14"
-                      />
-                    </div>
-                    <div className="flex-grow p-3">
-                      <div className="font-semibold text-gray-700">
-                        ELLA 900
-                      </div>
-                      <div className="text-sm text-gray-500">PPMBSI 2014</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center w-full p-2 mr-5 bg-white border shadow rounded-xl">
-                    <div className="flex items-center space-x-4">
-                      <img
-                        src="/img/female.png"
-                        alt="My profile"
-                        className="w-8 h-14"
-                      />
-                    </div>
-                    <div className="flex-grow p-3">
-                      <div className="font-semibold text-gray-700">
-                        ELLA 900
-                      </div>
-                      <div className="text-sm text-gray-500">-</div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </Layout>
     );

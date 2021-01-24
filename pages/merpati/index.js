@@ -1,21 +1,30 @@
 import React, { Component } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Layout from "../../component/Layout";
 import Table from "../../component/Table";
+import ModalTambah from "../../component/ModalTambah";
 
-export default class pigeon extends Component {
+export default class merpati extends Component {
+  constructor() {
+    super();
+    this.state = {
+      showModal: false
+    }
+  }
+
+  toggleShowHide = () => {
+    this.setState({ showModal: !this.state.showModal })
+  }
   render() {
     return (
-      <Layout title={this.props.title}>
+      <Layout title="Merpati">
         <div className="w-auto mx-auto">
           <div className="flex flex-row-reverse py-4 px-6">
             <div className="sm:flex justify-center items-center">
-              <Link href="/merpati/addNew">
-                <button className="text-gray-100 font-bold py-1 px-3 py-2 rounded-full text-xs bg-pink-600 hover:bg-green-500 mr-1">
-                  <i className="fas fa-plus mr-1"></i>Tambah Merpati
+              <button onClick={() => this.setState({ showModal: !this.state.showModal })} className="text-gray-100 font-bold py-1 px-3 py-2 rounded-full text-xs bg-pink-600 hover:bg-green-500 mr-1 focus:outline-none">
+                <i className="fas fa-plus mr-1"></i>Tambah Merpati
                 </button>
-              </Link>
+              {this.state.showModal ? (<ModalTambah onClick={this.toggleShowHide} id="tambah" />) : null}
             </div>
             <div className="relative text-gray-600 focus-within:text-gray-400">
               <span className="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -49,7 +58,7 @@ export default class pigeon extends Component {
             <Table />
           </div>
         </div>
-      </Layout>
+      </Layout >
     );
   }
 }

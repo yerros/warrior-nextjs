@@ -1,14 +1,9 @@
-import Head from "next/head";
 import Layout from "../component/Layout";
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Home</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Layout>
+      <Layout title="Dashboard">
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/2 xl:w-1/3 p-3">
             <div className="bg-white border rounded shadow p-2">

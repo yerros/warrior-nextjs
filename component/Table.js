@@ -20,17 +20,17 @@ export default class Table extends Component {
         </thead>
         <tbody>
           <tr className="hover:bg-grey-lighter">
-            <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-              <div class="flex items-center">
-                <div class="flex-shrink-0 w-10 h-10">
+            <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+              <div className="flex items-center">
+                <div className="flex-shrink-0 w-10 h-10">
                   <img
-                    class="w-full h-full rounded-full"
+                    className="w-full h-full rounded-full"
                     src="/img/pigeon.jpeg"
                     alt=""
                   />
                 </div>
-                <div class="ml-3">
-                  <p class="text-gray-900 whitespace-no-wrap">
+                <div className="ml-3">
+                  <p className="text-gray-900 whitespace-no-wrap">
                     MAD 90 /
                     <span className="text-gray-500 text-xs font-thin italic ml-1">
                       PPMBSI 922012
