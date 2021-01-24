@@ -60,8 +60,16 @@ function ModalTambah(props) {
                                     <input type="text" name="name" className="my-1 block w-96 rounded-full bg-white shadow-md border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />
                                 </label>
                                 <label className="block">
-                                    <span className="text-gray-700">PPMBSI</span>
+                                    <span className="text-gray-700">Ring Pusat</span>
                                     <input type="text" name="SI" className="my-1 block w-96 rounded-full bg-white shadow-md border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />
+                                </label>
+                                <label className="block">
+                                    <span className="text-gray-700">Warna</span>
+                                    <input type="text" name="color" className="my-1 block w-96 rounded-full bg-white shadow-md border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />
+                                </label>
+                                <label className="block">
+                                    <span className="text-gray-700">Tanggal Menetas</span>
+                                    <input type="date" name="dob" className="my-1 block w-96 rounded-full bg-white shadow-md border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />
                                 </label>
                                 <label className="block">
                                     <span className="text-gray-700">Kelamin?</span>

@@ -3,15 +3,27 @@ import Link from "next/link";
 import Layout from "../../component/Layout";
 import Table from "../../component/Table";
 import ModalTambah from "../../component/ModalTambah";
+import axios from "axios";
 
 export default class merpati extends Component {
   constructor() {
     super();
     this.state = {
-      showModal: false
+      showModal: false,
+      pigeons: []
     }
   }
 
+  componentDidMount() {
+    this.getDataPigeon()
+  }
+  getDataPigeon() {
+    axios.get('/api/merpati').then(res => {
+      this.setState({
+        pigeons: res.data
+      })
+    })
+  }
   toggleShowHide = () => {
     this.setState({ showModal: !this.state.showModal })
   }
@@ -21,7 +33,7 @@ export default class merpati extends Component {
         <div className="w-auto mx-auto">
           <div className="flex flex-row-reverse py-4 px-6">
             <div className="sm:flex justify-center items-center">
-              <button onClick={() => this.setState({ showModal: !this.state.showModal })} className="text-gray-100 font-bold py-1 px-3 py-2 rounded-full text-xs bg-pink-600 hover:bg-green-500 mr-1 focus:outline-none">
+              <button onClick={() => this.setState({ showModal: !this.state.showModal })} className="text-gray-100 font-bold py-1 px-3 py-2 rounded-full text-xs bg-pink-600 hover:bg-pink-700 hover:text-white focus:outline-none">
                 <i className="fas fa-plus mr-1"></i>Tambah Merpati
                 </button>
               {this.state.showModal ? (<ModalTambah onClick={this.toggleShowHide} id="tambah" />) : null}
@@ -55,7 +67,7 @@ export default class merpati extends Component {
             </div>
           </div>
           <div className="bg-white shadow-md rounded my-6">
-            <Table />
+            <Table pigeons={this.state.pigeons} />
           </div>
         </div>
       </Layout >

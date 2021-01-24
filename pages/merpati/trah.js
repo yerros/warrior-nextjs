@@ -1,140 +1,171 @@
 import React, { Component } from "react";
-import axios from "axios";
 import Layout from "../../component/Layout";
+import styles from '../../styles/Trah.module.css'
 
-export default class padigree extends Component {
-  constructor() {
-    super();
-    this.state = {
-      merpati: "",
-    };
-  }
-  componentDidMount() {
-    this.getMerpati();
-  }
-  getMerpati = () => {
-    axios.get("/api/merpati").then((res) => {
-      console.log(res.data);
-    });
-  };
+export default class test extends Component {
   render() {
     return (
       <Layout>
-        <div className="my-6 bg-white rounded shadow-xl">
-          <div className="flex p-10 text-3xl font-semibold text-pink-600 sm:relative title">
-            Warrior Team
-            <span className="block text-lg italic font-thin text-right text-gray-600">
-              Malang
-            </span>
-          </div>
-          <div class="container h-full w-screen">
-            <div class="flex flex-between h-full p-8">
-              <div class="w-2/6 py-12">
-                <div class="h-2/4 py-2 boks">
-                  <div class="w-full h-full px-2 flex flex-col">
-                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
-                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                        <div class="flex items-center space-x-4 mr-2">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
-                        </div>
-                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                          <div class="font-semibold text-gray-700">MAD 01</div>
-                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="">
-                      <div class="relative overflow-hidden bg-white rounded-xl shadow">
-                        <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                          <div class="flex items-center space-x-4 mr-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
-                          </div>
-                          <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                            <div class="font-semibold text-gray-700">MAD 01</div>
-                            <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="h-2/4 py-2">
-                  <div class="w-full h-full px-2 flex flex-col">
-                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
-                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                        <div class="flex items-center space-x-4 mr-2">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/FemalePink.png" alt="My profile" class="object-contain w-8" />
-                        </div>
-                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                          <div class="font-semibold text-gray-700">MAD 0111</div>
-                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="">
-                      <div class="relative overflow-hidden bg-white rounded-xl shadow">
-                        <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                          <div class="flex items-center space-x-4 mr-2">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
-                          </div>
-                          <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                            <div class="font-semibold text-gray-700">MAD 01</div>
-                            <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-2/6">
-                <div class="h-full">
-                  <div class="w-full h-full px-2 flex flex-col justify-center">
-                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
-                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                        <div class="flex items-center space-x-4 mr-2">
-                          <img src="/img/female.png" alt="My profile" class="object-contain w-8" />
-                        </div>
-                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                          <div class="font-semibold text-gray-700">MAD 01</div>
-                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="relative overflow-hidden bg-white rounded-xl shadow">
-                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                        <div class="flex items-center space-x-4 mr-2">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png" alt="My profile" class="object-contain w-8" />
-                        </div>
-                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                          <div class="font-semibold text-gray-700">MAD 01</div>
-                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="w-2/6 py-56">
-                <div class="h-full">
-                  <div class="w-full h-full px-2 flex items-center">
-                    <div class="relative overflow-hidden bg-white rounded-xl shadow mb-2">
-                      <div class="flex items-center w-full px-4 py-0 lg:py-2 bg-white border shadow rounded-xl">
-                        <div class="flex items-center space-x-4 mr-2">
-                          <img src="https://upload.wikimedia.org/wikipedia/commons/6/63/FemalePink.png" alt="My profile" class="object-contain w-8" />
-                        </div>
-                        <div class="flex-grow p-1 lg:p-3 max-w-16 truncate">
-                          <div class="font-semibold text-gray-700">MAD 01</div>
-                          <div class="text-sm text-gray-500">PPMBSI 2020 545555444</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div className="playground rounded-xl shadow ">
+          <div className="brackets_container">
+            <div className="font-semibold text-xl p-6">
+              Nama Team
             </div>
+            <table>
+              <thead>
+                <tr>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                  <th><span></span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="playground">
+                  <td className="round_column r_8">
+                    <div className="mtch_container">
+                      <div className="match_unit">
+                        <div className="m_segment m_top winner" data-team-id="9">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                        <div className="m_segment m_botm loser" data-team-id="12">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mtch_container">
+                      <div className="match_unit">
+                        <div className="m_segment m_top loser" data-team-id="14">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                        <div className="m_segment m_botm winner" data-team-id="16">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="round_column r_4">
+                    <div className="mtch_container">
+                      <div className="match_unit">
+                        <div className="m_segment m_top winner" data-team-id="9">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                        <div className="m_segment m_botm loser" data-team-id="16">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                  <td className="round_column r_2">
+                    <div className="mtch_container">
+                      <div className="match_final">
+                        <div className="m_segment m_top winner" data-team-id="9">
+                          <span>
+                            <div className="flex items-center space-x-4 px-2">
+                              <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Male_Blue.png/600px-Male_Blue.png"
+                                alt="My profile"
+                                className="object-contain w-8"
+                              />
+                              <div className="flex-grow p-0 lg:p-2 w-16 truncate truncate">
+                                <div className="font-semibold text-gray-700">MAD 01</div>
+                                <div className="font-normal text-gray-500">
+                                  PPMBSI 2020 545555444
+                          </div>
+                              </div>
+                            </div>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-
         </div>
       </Layout>
     );
