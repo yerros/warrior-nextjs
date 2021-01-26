@@ -40,20 +40,20 @@ export default function Table(props) {
                   </div>
                 </div>
               </td>
-              <td className="py-4 px-6 border-b border-grey-light">
+              <td className="py-4 px-6 text-xs lg:text-sm font-normal border-b border-grey-light">
                 <div className="flex">
-                  {i.parents[0].name || "-"} <img className="w-8 mx-2" src="/img/vs.png" alt="vs" />  {i.parents[1].name || "-"}
+                  {i.parents[0].name || "-"} <img className="h-6 mx-2" src="/img/vs.png" alt="vs" />  {i.parents[1].name || "-"}
                 </div>
               </td>
               <td className="py-4 px-6 border-b border-grey-light">
-                <a
-                  href="#"
-                  className="text-grey-lighter font-bold py-1 px-3 rounded-full text-xs bg-gray-300 hover:bg-gray-200 mr-1"
-                >
-                  <i className="far fa-edit mr-0 lg:mr-1"></i>
-                  <span className="hidden md:inline lg:inline">Edit</span>
-                </a>
-                <Link href="/merpati/trah">
+                <Link href={`/merpati/edit/${i.code}`}>
+                  <a className="text-grey-lighter font-bold py-1 px-3 rounded-full text-xs bg-gray-300 hover:bg-gray-200 mr-1"
+                  >
+                    <i className="far fa-edit mr-0 lg:mr-1"></i>
+                    <span className="hidden md:inline lg:inline">Edit</span>
+                  </a>
+                </Link>
+                <Link href={`/merpati/trah/${i.code}`}>
                   <a className="text-white font-bold py-1 px-3 rounded-full text-xs bg-pink-600 hover:bg-pink-700">
                     <i className="far fa-eye mr-0 lg:mr-1"></i>
                     <span className="hidden md:inline lg:inline">View</span>

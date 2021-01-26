@@ -4,3 +4,9 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
+
+@layer components {
+    .form-input {
+      @apply block my-1 bg-gray-100 border-transparent rounded shadow-md w-96 focus:border-gray-500 focus:bg-white focus:ring-0;
+    }
+  }

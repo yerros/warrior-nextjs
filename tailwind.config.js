@@ -1,4 +1,5 @@
 const plugin = require('tailwindcss/plugin')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ["./pages/**/*.js", "./components/**/*.js"],
@@ -7,6 +8,9 @@ module.exports = {
     extend: {
       container: {
         center: true
+      },
+      color: {
+        truegray: colors.trueGray
       }
     },
   },

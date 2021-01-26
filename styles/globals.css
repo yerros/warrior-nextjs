@@ -13,6 +13,7 @@ div#__next > div > div {
 html,
 body {
   min-height: 100vh !important;
+  font-family: "Poppins", sans-serif;
 }
 a {
   color: inherit;
@@ -146,12 +147,11 @@ a {
   border-right: solid 2px #fff;
 }
 .match_unit .m_segment:hover > span {
-  background-color: #c00;
   color: #fff;
 }
 .match_unit .m_segment:hover.loser,
 .match_unit .m_segment.highlight .loser {
-  border-right: solid 2px #fff;
+  border-right: solid 2px #c00;
 }
 .match_unit .m_segment.winner.highlight {
   border-right-color: #c00;

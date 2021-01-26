@@ -53,9 +53,8 @@ export default function Header() {
                 </button>
                 <div
                   id="userMenu"
-                  className={`bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 ${
-                    isUserOpen ? "" : "invisible"
-                  }`}
+                  className={`bg-white rounded shadow-md mt-2 absolute mt-12 top-0 right-0 min-w-full overflow-auto z-30 ${isUserOpen ? "" : "invisible"
+                    }`}
                 >
                   <ul className="list-reset">
                     <li>
@@ -107,9 +106,8 @@ export default function Header() {
             </div>
           </div>
           <div
-            className={`w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white z-20 ${
-              isMenuOpen ? "" : "hidden"
-            }`}
+            className={`w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 bg-white z-20 ${isMenuOpen ? "" : "hidden"
+              }`}
             id="nav-content"
           >
             <ul className="items-center flex-1 px-4 list-reset lg:flex md:px-0">
@@ -117,11 +115,10 @@ export default function Header() {
                 <Link href="/">
                   <a
                     href="/"
-                    className={`block py-1 md:py-3 pl-1 align-middle ${
-                      router.pathname == "/"
-                        ? "text-pink-600 border-pink-600"
-                        : "text-gray-500 border-white"
-                    } no-underline hover:text-gray-900 border-b-2 hover:border-pink-600`}
+                    className={`block py-1 md:py-3 pl-1 align-middle ${router.pathname == "/"
+                      ? "text-pink-600 border-pink-600"
+                      : "text-gray-500 border-white"
+                      } no-underline hover:text-gray-900 border-b-2 hover:border-pink-600`}
                   >
                     <i className="mr-3 fas fa-home fa-fw" />
                     <span className="pb-1 text-sm md:pb-0">Beranda</span>
@@ -132,11 +129,10 @@ export default function Header() {
                 <Link href="/merpati">
                   <a
                     href="/merpati"
-                    className={`block py-1 md:py-3 pl-1 align-middle ${
-                      router.pathname == "/merpati"
-                        ? "text-pink-600 border-pink-600"
-                        : "text-gray-500 border-white"
-                    } no-underline hover:text-gray-900 border-b-2 hover:border-pink-600`}
+                    className={`block py-1 md:py-3 pl-1 align-middle ${router.pathname == "/merpati"
+                      ? "text-pink-600 border-pink-600"
+                      : "text-gray-500 border-white"
+                      } no-underline hover:text-gray-900 border-b-2 hover:border-pink-600`}
                   >
                     <i className="mr-3 fas fa-crow fa-fw" />
                     <span className="pb-1 text-sm md:pb-0">Merpati</span>
@@ -144,13 +140,17 @@ export default function Header() {
                 </Link>
               </li>
               <li className="my-2 mr-6 md:my-0">
-                <a
-                  href="#"
-                  className="block py-1 pl-1 text-gray-500 no-underline align-middle border-b-2 border-white md:py-3 hover:text-gray-900 hover:border-purple-500"
-                >
-                  <i className="mr-3 fa fa-book-reader fa-fw" />
-                  <span className="pb-1 text-sm md:pb-0">Trah</span>
-                </a>
+                <Link href="/team">
+                  <a
+                    className={`block py-1 md:py-3 pl-1 align-middle ${router.pathname == "/team"
+                      ? "text-pink-600 border-pink-600"
+                      : "text-gray-500 border-white"
+                      } no-underline hover:text-gray-900 border-b-2 hover:border-pink-600`}
+                  >
+                    <i className="mr-3 fas fa-book-reader fa-fw" />
+                    <span className="pb-1 text-sm md:pb-0">Team</span>
+                  </a>
+                </Link>
               </li>
               <li className="my-2 mr-6 md:my-0">
                 <a
@@ -158,7 +158,7 @@ export default function Header() {
                   className="block py-1 pl-1 text-gray-500 no-underline align-middle border-b-2 border-white md:py-3 hover:text-gray-900 hover:border-green-500"
                 >
                   <i className="mr-3 fas fa-sliders-h fa-fw" />
-                  <span className="pb-1 text-sm md:pb-0">Team</span>
+                  <span className="pb-1 text-sm md:pb-0">Bantuan</span>
                 </a>
               </li>
               <li className="my-2 mr-6 md:my-0">
@@ -166,8 +166,8 @@ export default function Header() {
                   href="#"
                   className="block py-1 pl-1 text-gray-500 no-underline align-middle border-b-2 border-white md:py-3 hover:text-gray-900 hover:border-red-500"
                 >
-                  <i className="mr-3 fa fa-wallet fa-fw" />
-                  <span className="pb-1 text-sm md:pb-0">Payments</span>
+                  <i className="mr-3 fa fa-id-card-alt fa-fw" />
+                  <span className="pb-1 text-sm md:pb-0">Kritik & Saran</span>
                 </a>
               </li>
             </ul>

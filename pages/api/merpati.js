@@ -5,6 +5,7 @@ export default (req, res) => {
   res.json([
     {
       id: "IWAN MAKITA 06",
+      code: "bhTgsjaj",
       name: "JOJO",
       DOB: "12012020",
       sex: "Female",
@@ -53,6 +54,7 @@ export default (req, res) => {
     {
       id: "MAD 07",
       name: "Bluray",
+      code: "ahTgsuHs",
       DOB: "12012020",
       sex: "Male",
       color: "Gambir",

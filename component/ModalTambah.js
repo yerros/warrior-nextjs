@@ -1,29 +1,17 @@
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
-
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 function ModalTambah(props) {
 
-    const items = [
-        {
-            id: 0,
-            name: 'Cobol'
-        },
-        {
-            id: 1,
-            name: 'JavaScript'
-        },
-        {
-            id: 2,
-            name: 'Basic'
-        },
-        {
-            id: 3,
-            name: 'PHP'
-        },
-        {
-            id: 4,
-            name: 'Java'
-        }
-    ]
+    const [items, setItems] = useState('')
+
+    useEffect(async () => {
+        const result = await axios(
+            '/api/merpati',
+        );
+        console.log(result)
+        setItems(result.data);
+    }, []);
 
 
     const handleOnSearch = (string, results) => {
@@ -54,7 +42,7 @@ function ModalTambah(props) {
                             <h3 className="text-3xl font-semibold">Tambah Merpati</h3>
                         </div>
                         <div className="relative p-6 flex-auto w-full">
-                            <div className="grid grid-cols-1 gap-4">
+                            <div className="grid grid-cols-1 gap-4 px-2">
                                 <label className="block">
                                     <span className="text-gray-700">Ring / Nama</span>
                                     <input type="text" name="name" className="my-1 block w-96 rounded-full bg-white shadow-md border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="" />

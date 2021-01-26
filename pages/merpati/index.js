@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Link from "next/link";
 import Layout from "../../component/Layout";
 import Table from "../../component/Table";
 import ModalTambah from "../../component/ModalTambah";
@@ -10,6 +9,7 @@ export default class merpati extends Component {
     super();
     this.state = {
       showModal: false,
+      showModalEdit: false,
       pigeons: []
     }
   }
@@ -26,6 +26,9 @@ export default class merpati extends Component {
   }
   toggleShowHide = () => {
     this.setState({ showModal: !this.state.showModal })
+  }
+  toggleShowHideEdit = () => {
+    this.setState({ showModalEdit: !this.state.showModalEdit })
   }
   render() {
     return (
@@ -67,7 +70,7 @@ export default class merpati extends Component {
             </div>
           </div>
           <div className="bg-white shadow-md rounded my-6">
-            <Table pigeons={this.state.pigeons} />
+            <Table pigeons={this.state.pigeons} showModal={this.state.showModalEdit} toggleShowHideEdit={this.toggleShowHideEdit} />
           </div>
         </div>
       </Layout >
