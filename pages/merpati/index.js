@@ -1,20 +1,38 @@
 import React, { Component } from "react";
-import Head from "next/head";
-import Link from "next/link";
 import Layout from "../../component/Layout";
 import Table from "../../component/Table";
+import axios from "axios";
+import Link from "next/link";
+import { Get } from "../../lib";
 
-export default class pigeon extends Component {
+class merpati extends Component {
+  constructor() {
+    super();
+    this.state = {
+      pigeons: [],
+    };
+  }
+
+  componentDidMount() {
+    this.getDataPigeon();
+  }
+  getDataPigeon() {
+    Get("v1/merpati").then((res) => {
+      this.setState({
+        pigeons: res,
+      });
+    });
+  }
   render() {
     return (
-      <Layout title={this.props.title}>
+      <Layout title="Merpati">
         <div className="w-auto mx-auto">
-          <div className="flex flex-row-reverse py-4 px-6">
-            <div className="sm:flex justify-center items-center">
-              <Link href="/merpati/addNew">
-                <button className="text-gray-100 font-bold py-1 px-3 py-2 rounded-full text-xs bg-pink-600 hover:bg-green-500 mr-1">
-                  <i className="fas fa-plus mr-1"></i>Tambah Merpati
-                </button>
+          <div className="flex flex-row-reverse px-6 py-4">
+            <div className="items-center justify-center sm:flex">
+              <Link href="/merpati/add">
+                <a className="px-3 py-2 text-xs font-bold text-gray-100 bg-pink-600 rounded-full cursor-pointer hover:bg-pink-700 hover:text-white focus:outline-none">
+                  <i className="mr-1 fas fa-plus"></i>Tambah Merpati
+                </a>
               </Link>
             </div>
             <div className="relative text-gray-600 focus-within:text-gray-400">
@@ -39,17 +57,23 @@ export default class pigeon extends Component {
               <input
                 type="search"
                 name="q"
-                className="w-60 py-2 mr-2 text-sm text-white bg-gray-100 rounded-full pl-10 focus:outline-none focus:bg-white focus:text-gray-900"
+                className="py-2 pl-10 mr-2 text-sm text-white bg-gray-100 rounded-full w-60 focus:outline-none focus:bg-white focus:text-gray-900"
                 placeholder="Search..."
                 autoComplete="off"
               />
             </div>
           </div>
-          <div className="bg-white shadow-md rounded my-6">
-            <Table />
+          <div className="my-6 bg-white rounded shadow-md">
+            <Table
+              pigeons={this.state.pigeons}
+              showModal={this.state.showModalEdit}
+              toggleShowHideEdit={this.toggleShowHideEdit}
+            />
           </div>
         </div>
       </Layout>
     );
   }
 }
+
+export default merpati;

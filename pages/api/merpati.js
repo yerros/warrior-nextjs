@@ -2,136 +2,150 @@
 
 export default (req, res) => {
   res.statusCode = 200;
-  res.json({
-    id: "06",
-    name: "JOJO",
-    DOB: "12012020",
-    sex: "Female",
-    color: "Tritis",
-    ring: {
-      type: 0,
-      code: "001",
+  res.json([
+    {
+      id: "IWAN MAKITA 06",
+      code: "bhTgsjaj",
+      name: "JOJO",
+      DOB: "12012020",
+      sex: "Female",
+      color: "Tritis",
+      ringPusat: "2019 / 254544",
+      picture: "http://pic.com",
+      achievement: [
+        {
+          0: "Juara 1 Malang",
+          1: "Juara 1 Surabaya",
+        },
+      ],
+      parents: [
+        {
+          id: "06",
+          name: "Maspion",
+          DOB: "12012020",
+          sex: "Female",
+          color: "Tritis",
+          ringPusat: "2019 / 254544",
+          picture: "http://pic.com",
+          achievement: [
+            {
+              0: "Juara 1 Malang",
+              1: "Juara 1 Surabaya",
+            },
+          ],
+        },
+        {
+          id: "06",
+          name: "IWAN MAKITA 290",
+          DOB: "12012020",
+          sex: "Female",
+          color: "Tritis",
+          ringPusat: "2019 / 254544",
+          picture: "http://pic.com",
+          achievement: [
+            {
+              0: "Juara 1 Malang",
+              1: "Juara 1 Surabaya",
+            },
+          ],
+        },
+      ],
     },
-    picture: "http://pic.com",
-    achievement: [
-      {
-        0: "Juara 1 Malang",
-        1: "Juara 1 Surabaya",
-      },
-    ],
-    parents: [
-      {
-        id: "06",
-        name: "JOJO",
-        DOB: "12012020",
-        sex: "Female",
-        color: "Tritis",
-        ring: {
-          type: 0,
-          code: "001",
+    {
+      id: "MAD 07",
+      name: "Bluray",
+      code: "ahTgsuHs",
+      DOB: "12012020",
+      sex: "Male",
+      color: "Gambir",
+      ringPusat: "2020 / 19545",
+      picture: "http://pic.com",
+      achievement: [
+        {
+          0: "Juara 1 Malang",
+          1: "Juara 1 Surabaya",
         },
-        picture: "http://pic.com",
-        achievement: [
-          {
-            0: "Juara 1 Malang",
-            1: "Juara 1 Surabaya",
-          },
-        ],
-        parrent: [
-          {
-            id: "06",
-            name: "JOJO",
-            DOB: "12012020",
-            sex: "Female",
-            color: "Tritis",
-            ring: {
-              type: 0,
-              code: "001",
+      ],
+      parents: [
+        {
+          id: "06",
+          name: "Maspion",
+          DOB: "12012020",
+          sex: "Female",
+          color: "Tritis",
+          ringPusat: "2019 / 254544",
+          picture: "http://pic.com",
+          achievement: [
+            {
+              0: "Juara 1 Malang",
+              1: "Juara 1 Surabaya",
             },
-            picture: "http://pic.com",
-            achievement: [
-              {
-                0: "Juara 1 Malang",
-                1: "Juara 1 Surabaya",
-              },
-            ],
-          },
-          {
-            id: "06",
-            name: "JOJO",
-            DOB: "12012020",
-            sex: "Female",
-            color: "Tritis",
-            ring: {
-              type: 0,
-              code: "001",
-            },
-            picture: "http://pic.com",
-            achievement: [
-              {
-                0: "Juara 1 Malang",
-                1: "Juara 1 Surabaya",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        id: "06",
-        name: "JOJO",
-        DOB: "12012020",
-        sex: "Female",
-        color: "Tritis",
-        ring: {
-          type: 0,
-          code: "001",
+          ],
         },
-        picture: "http://pic.com",
-        achievement: [
-          {
-            0: "Juara 1 Malang",
-            1: "Juara 1 Surabaya",
-          },
-        ],
-        parrent: [
-          {
-            id: "06",
-            name: "JOJO",
-            DOB: "12012020",
-            sex: "Female",
-            color: "Tritis",
-            ring: {
-              type: 0,
-              code: "001",
+        {
+          id: "06",
+          name: "Orchid 290",
+          DOB: "12012020",
+          sex: "Female",
+          color: "Tritis",
+          ringPusat: "2019 / 254544",
+          picture: "http://pic.com",
+          achievement: [
+            {
+              0: "Juara 1 Malang",
+              1: "Juara 1 Surabaya",
             },
-            picture: "http://pic.com",
-            achievement: [
-              {
-                0: "Juara 1 Malang",
-                1: "Juara 1 Surabaya",
-              },
-            ],
-          },
-          {
-            id: "06",
-            name: "JOJO",
-            DOB: "12012020",
-            sex: "Female",
-            color: "Tritis",
-            ring: {
-              type: 0,
-              code: "001",
+          ],
+        },
+      ],
+    },
+    {
+      id: "MAD 07",
+      name: "Bla",
+      code: "ahTgsuHs",
+      DOB: "12012020",
+      sex: "Male",
+      color: "Gambir",
+      ringPusat: "2020 / 19545",
+      picture: "http://pic.com",
+      achievement: [
+        {
+          0: "Juara 1 Malang",
+          1: "Juara 1 Surabaya",
+        },
+      ],
+      parents: [
+        {
+          id: "06",
+          name: "Maspion",
+          DOB: "12012020",
+          sex: "Female",
+          color: "Tritis",
+          ringPusat: "2019 / 254544",
+          picture: "http://pic.com",
+          achievement: [
+            {
+              0: "Juara 1 Malang",
+              1: "Juara 1 Surabaya",
             },
-            picture: "http://pic.com",
-            achievement: [
-              {
-                0: "Juara 1 Malang",
-                1: "Juara 1 Surabaya",
-              },
-            ],
-          },
-        ],
-      },
-    ],
-  });
+          ],
+        },
+        {
+          id: "06",
+          name: "Orchid 290",
+          DOB: "12012020",
+          sex: "Female",
+          color: "Tritis",
+          ringPusat: "2019 / 254544",
+          picture: "http://pic.com",
+          achievement: [
+            {
+              0: "Juara 1 Malang",
+              1: "Juara 1 Surabaya",
+            },
+          ],
+        },
+      ],
+    },
+  ]);
 };

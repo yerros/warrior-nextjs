@@ -9,14 +9,26 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "@tailwindcss/forms": "^0.2.1",
     "axios": "^0.21.1",
+    "firebase": "^8.2.5",
+    "fuse.js": "^6.4.6",
     "next": "10.0.5",
+    "next-redux-wrapper": "^6.0.2",
+    "prop-types": "^15.7.2",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-firebase-file-uploader": "^2.4.4",
+    "react-redux": "^7.2.2",
+    "react-search-autocomplete": "^3.0.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^4.0.0",
     "autoprefixer": "^10.2.1",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "tailwindcss-pseudo-elements": "^1.5.1"
   }
 }

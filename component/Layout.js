@@ -5,9 +5,12 @@ import Header from "./Header";
 export default function Layout(props) {
   return (
     <>
+      <Head>
+        <title>{props.title}</title>
+      </Head>
       <Header />
-      <div className="container w-full mx-auto pt-20 h-full">
-        <div className="w-full px-4 md:px-0 md:mt-8 mb-16 text-gray-800 leading-normal h-full">
+      <div className="container w-full h-screen pt-20 mx-auto">
+        <div className="w-full h-full px-4 mb-16 leading-normal text-gray-800 md:px-0 md:mt-8">
           {props.children}
         </div>
       </div>
