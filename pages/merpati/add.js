@@ -3,7 +3,8 @@ import axios from "axios";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import Layout from "../../component/Layout";
 import { Get, Post } from "../../lib";
-import { Router } from "next/router";
+import Router from "next/router";
+import Notiflix from "notiflix";
 
 function add() {
   const [items, setItems] = useState([]);
@@ -48,6 +49,10 @@ function add() {
 
   const handleRemovePrestasi = (id) => {
     setAchievement(achievement.filter((s, sid) => id !== sid));
+    toast.notify("Data berhasil dihapus", {
+      duration: 5,
+      type: "success",
+    });
   };
 
   const handleSubmit = () => {
@@ -62,7 +67,10 @@ function add() {
       gender,
       parrents,
     };
-    Post("v1/merpati", body).then((res) => Router.push("/merpati"));
+    Post("v1/merpati", body).then((res) => {
+      Notiflix.Notify.Success("Data Berhasil disimpan");
+      return Router.push("/merpati");
+    });
   };
 
   const handleOnSearch = (string, results) => {

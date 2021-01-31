@@ -22,9 +22,8 @@ export default function Table(props) {
       </thead>
       <tbody>
         {dataMerpati.map((i) => {
-          console.log(i.parrents);
           return (
-            <tr className="hover:bg-grey-lighter" key={i.id}>
+            <tr className="hover:bg-grey-lighter" key={i._id}>
               <td className="px-5 py-5 text-sm bg-white border-b border-gray-200">
                 <div className="flex items-center">
                   <div className="flex-shrink-0 w-10 h-10">

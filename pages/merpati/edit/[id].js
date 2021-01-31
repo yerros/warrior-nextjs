@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Get, Post } from "../../../lib";
+import { Delete, Get, Post, Put } from "../../../lib";
 import { ReactSearchAutocomplete } from "react-search-autocomplete";
 import Layout from "../../../component/Layout";
-import { useRouter } from "next/router";
+import moment from "moment";
+import Router, { useRouter } from "next/router";
+import Notiflix from "notiflix";
 
 function edit() {
   const [items, setItems] = useState([]);
@@ -25,13 +27,16 @@ function edit() {
     const result = await Get("v1/merpati");
     setItems(result);
     const res = await Get(`v1/merpati/${id}`);
+    if (!res) {
+      return Router.push("/merpati");
+    }
     setPicture(res.picture);
     setAchievement(res.achievement);
     setName(res.name);
     setRing(res.ring);
     setPpmbsi(res.ppmbsi);
     setColor(res.color);
-    setDob(res.dob);
+    setDob(moment(res.dob).format("YYYY-MM-DD"));
     setGender(res.gender);
     setParrents(res.parrents);
   }, []);
@@ -75,7 +80,18 @@ function edit() {
       gender,
       parrents,
     };
-    Post("v1/merpati", body).then((res) => Router.push("/merpati"));
+    Put(`v1/merpati/${id}`, body).then((res) => {
+      Notiflix.Notify.Success("Data Berhasil diedit");
+      return Router.push("/merpati");
+    });
+  };
+
+  const handleDelete = () => {
+    const confirm = window.confirm("Are you sure to delete this Property?");
+    Delete(`v1/merpati/${id}`).then((res) => {
+      Notiflix.Notify.Success("Data Berhasil dihapus");
+      return Router.push("/merpati");
+    });
   };
 
   const handleOnSearch = (string, results) => {
@@ -179,6 +195,8 @@ function edit() {
                 </button>
               </div>
             </label>
+          </div>
+          <div className="grid grid-cols-1 gap-6 p-2 lg:p-0">
             <label className="block">
               <span className="text-gray-700">Nama Burung</span>
               <input
@@ -190,8 +208,6 @@ function edit() {
                 placeholder=""
               />
             </label>
-          </div>
-          <div className="grid grid-cols-1 gap-6 p-2 lg:p-0">
             <label className="block">
               <span className="text-gray-700">Ring Kandang</span>
               <input
@@ -248,41 +264,11 @@ function edit() {
                 <option value="betina">Betina</option>
               </select>
             </label>
-            <label className="block">
-              <span className="text-gray-700">Induk Jantan</span>
-              <div className="block my-1 border-transparent rounded w-96 focus:border-gray-500 focus:bg-white focus:ring-0">
-                <ReactSearchAutocomplete
-                  styling={{
-                    fontFamily: "Poppins",
-                  }}
-                  items={items}
-                  fuseOptions={{ keys: ["ring", "name"] }} // Search on both fields
-                  resultStringKeyName="ring"
-                  onSearch={handleOnSearch}
-                  onSelect={handleOnSelectMale}
-                  onFocus={handleOnFocus}
-                />
-              </div>
-            </label>
-            <label className="block">
-              <span className="text-gray-700">Induk Betina</span>
-              <div className="block my-1 border-transparent rounded w-96 focus:border-gray-500 focus:bg-white focus:ring-0">
-                <ReactSearchAutocomplete
-                  styling={{
-                    fontFamily: "Poppins",
-                  }}
-                  fuseOptions={{ keys: ["ring", "name"] }} // Search on both fields
-                  resultStringKeyName="ring"
-                  items={items}
-                  onSearch={handleOnSearch}
-                  onSelect={handleOnSelectFemale}
-                  onFocus={handleOnFocus}
-                />
-              </div>
-            </label>
+
             <div className="flex items-center justify-end rounded-b">
               <button
-                className="px-6 py-2 mb-1 mr-1 text-sm font-bold text-red-500 uppercase bg-transparent outline-none focus:outline-none"
+                onClick={handleDelete}
+                className="px-6 py-2 mb-1 mr-1 text-sm font-bold text-red-500 uppercase bg-transparent rounded outline-none hover:bg-gray-200 focus:outline-none"
                 type="button"
                 style={{ transition: "all .15s ease" }}
               >
